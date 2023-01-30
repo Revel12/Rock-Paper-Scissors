@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.scoreboard {
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.scoreboard h4 {
+    font-size: 35px;
+}
+
+.playerScore,
+.pcScore {
+    margin-top: 15px;
+    font-size: 50px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 75px;
+}
+
+button {
+    height: 85px;
+    width: 150px;
+    padding: 25px 25px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background: darkgray;
+    border: none;
+    box-shadow: -1px 9px lightgray;
+}
+
+button:hover {
+    background-color: lightgray;
+    box-shadow: -2px 9px lightgray;
+    border-radius: 25px;
+}
+
+button:active {
+    background-color: lightgray;
+    box-shadow: -3px 3px lightgray;
+    transform: translateY(4px);
+}
