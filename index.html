@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function getComputerChoice() {
+            const choices = ['rock', 'paper', 'scissors']
+            randInt = Math.floor(Math.random() * choices.length)
+            randChoice = choices[randInt]
+            return randChoice
+        }
+
+        function playRound(player, pc) {
+            player = player.toLowerCase()
+            if (player == 'rock') {
+                if  (pc == 'rock') {
+                    return 'Tie'
+                } else if (pc ==  'paper') {
+                    return 'You Lose! Paper beats Rock'
+                } else {
+                    return 'You Win! Rock beats scissors'
+                }
+            } else if (player == 'paper') {
+                if (pc == 'paper') {
+                    return 'Tie'
+                } else if (pc == 'rock') {
+                    return 'You Win! Paper beats Rock'
+                } else {
+                    return 'You Lost! Scissors beats Paper'
+                }
+            } else {
+                if (pc == 'scissors') {
+                    return 'Tie'
+                } else if (pc == 'rock') {
+                    return 'You Lost! Rock beats scissors'
+                } else {
+                    return 'You Win! Scissors beats paper'
+                }
+            }
+        }
+
+        function game() {
+
+            playerScore = 0
+            pcScore = 0
+
+            for (let i =  0; i <= 5; i++) {
+                player = prompt('Enter rock, paper, or scissors')
+                pc = getComputerChoice()
+                result = playRound(player, pc)
+                console.log(result)
+                
+                if (result.includes('You Win!')) {
+                    playerScore += 1
+                } else  if (result.includes('You Lost!')) {
+                    pcScore += 1
+                }
+            }
+
+            if (playerScore > pcScore){
+                console.log('Player Wins')
+            } else if(playerScore < pcScore) {
+                consloe.log('Player Loses')
+            } else {
+                console.log('Tie')
+            }
+
+        }
+
+        game()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
